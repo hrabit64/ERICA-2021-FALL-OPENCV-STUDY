@@ -30,8 +30,8 @@
 | :------------------------: | :-------------------: | :------------------: |
 |      로버츠(Roberts)       | roberts_prewitt.ipynb |        김준철        |
 |      프리윗(Prewitt)       | roberts_prewitt.ipynb |        김준철        |
-|        캐니(Canny)         |                       |        권주원        |
-|        소벨(Sobel)         |                       |        권주원        |
+|        캐니(Canny)         |   Canny_Sobel.ipynb   |        권주원        |
+|        소벨(Sobel)         |   Canny_Sobel.ipynb   |        권주원        |
 |   라플라시안(Laplacian)    |  laplacian_LoG.ipynb  |        황준서        |
 | LoG(Laplacian of Gaussian) |  laplacian_LoG.ipynb  |        황준서        |
 |       현업 활용 사례       |      using.ipynb      | 황준서/김준철/권주원 |
@@ -55,8 +55,8 @@
 |  컬러 영상 처리 - 색 변환   | color_video_processing.ipynb | 김준철 |
 | 색상 범위에 따른 영역 분할  | color_video_processing.ipynb | 김준철 |
 |     히스토그램 역 투영      | color_video_processing.ipynb | 김준철 |
-|   이진화 & 적응형 이진화    |                              | 권주원 |
-| 모폴로지 기법 - 침식 & 팽창 |                              | 권주원 |
+|   이진화 & 적응형 이진화    |      binarization.ipynb      | 권주원 |
+| 모폴로지 기법 - 침식 & 팽창 |       morphology.ipynb       | 권주원 |
 |         외곽선 검출         |        contours.ipynb        | 황준서 |
 |      외곽선 검출 활용       |       contours2.ipynb        | 황준서 |
 
@@ -72,10 +72,10 @@
 
 **files dir ./week3**
 
-|       주제        |   파일명   | 작성자 |
-| :---------------: | :--------: | :----: |
-|    템플릿 매칭    |            | 권주원 |
-| Haar-like feature |            | 권주원 |
-|        HOG        | hog.ipynb  | 김준철 |
-|       SIFT        | sift.ipynb | 황준서 |
+|       주제        |         파일명          | 작성자 |
+| :---------------: | :---------------------: | :----: |
+|    템플릿 매칭    |  template_match.ipynb   | 권주원 |
+| Haar-like feature | Haar-like Feature.ipynb | 권주원 |
+|        HOG        |        hog.ipynb        | 김준철 |
+|       SIFT        |       sift.ipynb        | 황준서 |
 
