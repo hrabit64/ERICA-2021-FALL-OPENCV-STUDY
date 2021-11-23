@@ -1,8 +1,6 @@
 import os
-import xml.etree.ElementTree as ET
-import math
 import cv2
-
+import numpy as np
 
 class Preprocessing():
     __default_path__ = ''
@@ -10,12 +8,35 @@ class Preprocessing():
 
     def __init__(self, data_path):
         self.__default_path__ = data_path
-        os.mkdir(os.path.join(data_path, 'with_mask'))
-        os.mkdir(os.path.join(data_path, 'without_mask'))
-        os.mkdir(os.path.join(data_path, 'mask_weared_incorrect'))
 
     def getDefaultPath(self):
-        return  self.__default_path__
+        return self.__default_path__
 
-    def getListOfImages(self):
-        return os.listdir(os.path.join(self.__default_path__, 'images'))
+    def getListOfImages(self, path):
+        return os.listdir(path)
+
+    def getImage(self, mode, size):
+        images = []
+        labels = []
+        for idx, now in enumerate(['Mask', 'Non Mask']):
+            default_path = os.path.join(self.__default_path__, mode, now)
+            img_name_list = self.getListOfImages(default_path)
+
+            for img_name in img_name_list:
+                img = cv2.imread(os.path.join(default_path, img_name))
+                # img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+                img = cv2.resize(img, size)
+                channels = cv2.split(img)
+
+                for i, c in enumerate(channels):
+                    channels = list(channels)
+                    dx = cv2.Sobel(c, cv2.CV_64F, 1, 0, ksize=3)
+                    dx = cv2.convertScaleAbs(dx)
+                    dy = cv2.Sobel(c, cv2.CV_64F, 0, 1, ksize=3)
+                    dy = cv2.convertScaleAbs(dy)
+                    c = cv2.addWeighted(dx, 1, dy, 1, 0)
+                    channels[i] = c
+                img = cv2.merge(channels)
+                images.append(img)
+                labels.append(idx)
+        return np.asarray(images) / 225, np.asarray(labels)
