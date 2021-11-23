@@ -3,6 +3,13 @@ import Preprocess
 import tensorflow.keras as keras
 import tensorflow as tf
 # tf.debugging.set_log_device_placement(True)
+gpus = tf.config.experimental.list_physical_devices('GPU')
+if gpus:
+    try:
+        tf.config.experimental.set_virtual_device_configuration(gpus[0], [tf.config.experimental.VirtualDeviceConfiguration(memory_limit=3072)])
+    except RuntimeError as e:
+        print(e)
+
 
 def main():
     preprocessor = Preprocess.Preprocessing('./data/learning')
