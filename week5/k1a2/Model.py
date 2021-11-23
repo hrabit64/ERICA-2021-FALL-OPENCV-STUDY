@@ -8,8 +8,6 @@ class VGG16():
         model = keras.models.Sequential()
         model.add(pre_trained_vgg)
         model.add(keras.layers.Flatten())
-        model.add(keras.layers.Dense(2048, kernel_regularizer=keras.regularizers.l1_l2(l1=0.001,l2=0.001), activation='relu'))
-        model.add(keras.layers.Dropout(0.5))
         model.add(keras.layers.Dense(1024, kernel_regularizer=keras.regularizers.l1_l2(l1=0.001,l2=0.001), activation='relu'))
         model.add(keras.layers.Dropout(0.5))
         model.add(keras.layers.Dense(512, kernel_regularizer=keras.regularizers.l1_l2(l1=0.001,l2=0.001), activation='relu'))
