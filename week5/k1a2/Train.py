@@ -2,7 +2,7 @@ import Model
 import Preprocess
 import tensorflow.keras as keras
 import tensorflow as tf
-tf.debugging.set_log_device_placement(True)
+# tf.debugging.set_log_device_placement(True)
 
 def main():
     preprocessor = Preprocess.Preprocessing('./data/learning')
