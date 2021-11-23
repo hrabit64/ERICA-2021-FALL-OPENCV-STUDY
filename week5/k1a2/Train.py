@@ -17,7 +17,7 @@ def main():
 
     callbacks = [keras.callbacks.EarlyStopping(monitor='accuracy', mode='max', patience=5),
                  keras.callbacks.ModelCheckpoint(filepath='./data/model/best_model_sobel.h5', monitor='accuracy', save_best_only=True)]
-    model_sobel.fit(train_data_sobel, train_y_sobel, epochs=50, batch_size=32,
+    model_sobel.fit(train_data_sobel, train_y_sobel, epochs=50, batch_size=16,
                     validation_data=(val_data_sobel, val_y_sobel), shuffle=True, callbacks=callbacks)
 
     train_data, train_y = preprocessor.getImage('Train', (224,224))
@@ -30,7 +30,7 @@ def main():
 
     callbacks = [keras.callbacks.EarlyStopping(monitor='accuracy', mode='max', patience=5),
                  keras.callbacks.ModelCheckpoint(filepath='./data/model/best_model.h5', monitor='accuracy', save_best_only=True)]
-    model.fit(train_data, train_y, epochs=50, batch_size=32,
+    model.fit(train_data, train_y, epochs=50, batch_size=16,
                     validation_data=(val_data, val_y), shuffle=True, callbacks=callbacks)
 
     model_sobel = keras.models.load_model('./data/model/best_model_sobel.h5')
