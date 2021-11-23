@@ -6,6 +6,8 @@ import tensorflow as tf
 def main():
     preprocessor = Preprocess.Preprocessing('./data/learning')
 
+    tf.keras.backend.clear_session()
+
     train_data_sobel, train_y_sobel = preprocessor.getSobelImage('Train', (224,224))
     val_data_sobel, val_y_sobel = preprocessor.getSobelImage('Validation', (224,224))
     test_data_sobel, test_y_sobel = preprocessor.getSobelImage('Test', (224,224))
