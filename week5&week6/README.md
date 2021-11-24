@@ -8,5 +8,5 @@
 | :-----------------------: | :------: | :----: |
 | CBIR &amp; Autoclassifier | hrabit64 | 황준서 |
 | mask_detection_with_sobel |   k1a2   | 김준철 |
-|             -             |    -     | 권주원 |
+|    find location & OCR    |  G4tsby  | 권주원 |
 
