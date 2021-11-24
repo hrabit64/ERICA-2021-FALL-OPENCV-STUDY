@@ -9,5 +9,6 @@
 | 크기 불변 특징점 검출 |    sift.ipynb    | 김준철 |
 |      호모그래피       | homography.ipynb | 황준서 |
 |      특징점 매칭      |  matching.ipynb  | 황준서 |
-|                       |                  |        |
+|  해리스 코너 검출     |   Harris.ipynb   | 권주원  |
+|   FAST 코너 검출     |     FAST.ipynb    | 권주원  |
 
