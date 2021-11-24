@@ -98,5 +98,19 @@
 | 크기 불변 특징점 검출 |    sift.ipynb    | 김준철 |
 |      호모그래피       | homography.ipynb | 황준서 |
 |      특징점 매칭      |  matching.ipynb  | 황준서 |
-|                       |                  |        |
+|           -           |        -         | 권주원 |
+
+
+
+### 5주차&6주차 : 관련 프로젝트 찾기 & 개인 프로젝트
+
+------
+
+**files dir ./week5&week6**
+
+|           주제            |  폴더명  | 작성자 |
+| :-----------------------: | :------: | :----: |
+| CBIR &amp; Autoclassifier | hrabit64 | 황준서 |
+| mask_detection_with_sobel |   k1a2   | 김준철 |
+|             -             |    -     | 권주원 |
 
